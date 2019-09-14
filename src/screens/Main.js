@@ -6,11 +6,18 @@ import {
 } from 'react-native';
 import BarCodeScanner from '../components/BarCodeScanner';
 
+
+const styles = StyleSheet.create({
+	container: {
+		fontFamily: 'Cera Pro'
+	}
+});
+
 export default function Main(){
 
     return (
         <View style={styles.container}>
-            <BarCodeScanner/>
+            <Text>hello world!</Text>
         </View>
     )
 }
