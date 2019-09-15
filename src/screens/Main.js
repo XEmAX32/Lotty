@@ -82,14 +82,9 @@ const styles = StyleSheet.create({
 		fontWeight:'bold',
 		fontSize:25,
 		lineHeight:42,
-<<<<<<< HEAD
-		paddingHorizontal:30
-// 		fontFamily: 'Cera-Pro'
-=======
-		letterSpacing:3,
 		paddingHorizontal:30,
+		letterSpacing:3,
 		fontFamily: 'Cera-Pro'
->>>>>>> b6992b130c098a054f757565b81d77c926552a6a
 	},
 	SectionStyle: {
 		flexDirection: 'row',

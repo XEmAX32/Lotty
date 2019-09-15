@@ -39,7 +39,7 @@ const AppRouter = createStackNavigator({
 	},
 	FlightInformation: {
 		screen: FlightInformation
-	}
+	},
 	PlaceInfo: {
 		screen: PlaceInfo
 	},
