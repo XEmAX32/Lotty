@@ -74,7 +74,7 @@ export default function Ticket({name,arrival,departure,flight, ...props}) {
                         </View>
                     </View>
                     <View style={{backgroundColor: '#123C69',width:90,height:90,justifyContent:'center',alignItems:'center'}}>
-                        <LotLogo />
+                        <Image source={require('../../assets/logoLOT.png')} />
                     </View>
                 </View>
             </View>
