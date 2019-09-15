@@ -9,11 +9,11 @@ import {
 import ExitIcon from '../components/ExitIcon';
 import Ticket from '../components/Ticket';
 
-export default function FlightInformation() {
+export default function FlightInformation({navigation}) {
     return (
         <ScrollView style={styles.container} contentContainerStyle={{paddingTop:50}}>
             <View style={{alignItems:'center'}}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.goBack()}>
                     <ExitIcon />
                 </TouchableOpacity>
             </View>
