@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
 	header: {
 		color:"#fff",
 		fontWeight:'bold',
-		fontSize:25,
+		fontSize:30,
 		lineHeight:42,
 		paddingHorizontal:30,
 		letterSpacing:3,
@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
 	input: {
 		flex:1,
 		fontSize:20,
+		fontFamily:'Cera-Pro-Bold',
 		paddingLeft:10,
 		height: 50,
 		color:"#707070"
@@ -147,6 +148,7 @@ const styles = StyleSheet.create({
 	place: {
 		color: "#123C69",
 		fontSize:20,
+		fontFamily:'Cera-Pro-Bold',
 		fontWeight:'bold',
 		left:15,
 		top:10
@@ -165,6 +167,7 @@ const styles = StyleSheet.create({
 		top:3,
 		fontSize:18,
 		fontWeight:'bold',
+		fontFamily:'Cera-Pro-Bold',
 		color:"#dd7962"
 	},
 	flights: {
@@ -174,14 +177,16 @@ const styles = StyleSheet.create({
 		left:30,
 		borderRadius:5,
 		marginTop:40,
-		marginBottom:100
+		marginBottom:100,
+		alignItems:'center'
 	},
 	label: {
 		top:30,
-		left:90,
+// 		left:90,
 		color:"#123C69",
 		fontSize:18,
 		fontWeight:'bold',
+		fontFamily:'Cera-Pro-Bold',
 	},
 	pin: {
 		zIndex:50,
@@ -193,7 +198,7 @@ const styles = StyleSheet.create({
 		backgroundColor:"#123C69"
 	},
 	pinf: {
-		left:140,
+// 		left:140,
 	},
 	pind: {
 		left:107.5,

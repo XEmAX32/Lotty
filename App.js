@@ -76,7 +76,7 @@ class App extends React.Component {
 	
 		const fontAssets = cacheFonts([{
 			'Cera-Pro-Bold': require('./assets/fonts/Cera_Pro_Bold.otf'),
-			'Cera-Pro-Medium': require('./assets/fonts/Cera_Pro_Medium.otf'),
+// 			'Cera-Pro-Medium': require('./assets/fonts/Cera_Pro_Medium.otf'),
 			'Tiempos': require('./assets/fonts/TiemposHeadline-Bold.otf')
 		}]);
 	

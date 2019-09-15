@@ -80,7 +80,6 @@ const styles = StyleSheet.create({
 		color:"#dd7962"
 	},
 	ticket: {
-		marginTop:25,
 		backgroundColor: '#123C69',
 		width:315,
 		height:87,
