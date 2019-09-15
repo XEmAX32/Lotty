@@ -5,14 +5,29 @@ import {
     TextInput,
     Image,
     StyleSheet,
-    ScrollView
+    ScrollView,
+    TouchableOpacity
 } from 'react-native';
 import BarCodeScanner from '../components/BarCodeScanner';
 import SearchIco from '../components/SearchIco'
 import * as Font from 'expo-font';
 
-//TEST
-const AMS = require("../../assets/SH/AMS.jpg")
+const places = require('../../assets/Places.json')
+
+
+const Card = ({city, img, price, ...props}) => {
+// 	console.log(props.navigate)
+	return (
+		<TouchableOpacity style={styles.cardSelf} {...props} onPress={()=>props.navigate({city:city,price:price,img:img})}>
+			<Image style={styles.image} source={img}></Image>
+			<View style={styles.info}>
+				<Text style={styles.place}>{city}</Text>
+				<View style={styles.price}><Text style={styles.pricetx}>From {price} PLN</Text></View>
+			</View>
+		</TouchableOpacity>
+	)
+}
+
 
 export default class Main extends React.Component{
 	
@@ -29,7 +44,6 @@ export default class Main extends React.Component{
 		//TODO in scrollview read peter's json and map
 		//TODO my flights button?
 		
-		
 			return (
 				
 				<View style={styles.container}>
@@ -40,22 +54,11 @@ export default class Main extends React.Component{
 					</View>
 					
 					<Text style={styles.title}>Do you need some inspiration?</Text>
-					<ScrollView horizontal showsVerticalScrollIndicator={false} style={styles.scroll}>
-						<View style={styles.cardSelf}>
-							<Image style={styles.image} source={AMS}></Image>
-							<View style={styles.info}>
-								<Text style={styles.place}>Gdańsk</Text>
-								<View style={styles.price}><Text style={styles.pricetx}>From 882 PLN</Text></View>
-							</View>
-						</View>
-						
-						<View style={styles.cardSelf}>
-							<Image style={styles.image} source={AMS}></Image>
-							<View style={styles.info}>
-								<Text style={styles.place}>Gdańsk</Text>
-								<View style={styles.price}><Text style={styles.pricetx}>From 882 PLN</Text></View>
-							</View>
-						</View>
+					<ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scroll}>
+						<Card city="Warsaw" price={882} img={require("../../assets/SH/WAW.jpg")} navigate={(obj) => this.props.navigation.navigate('PlaceInfo', obj)}/>
+						<Card city="Milan" price={882} img={require("../../assets/SH/MXP.jpg")} navigate={(obj) => this.props.navigation.navigate('PlaceInfo', obj)}/>
+						<Card city="Bucharest" price={882} img={require("../../assets/SH/OTP.jpg")} navigate={(obj) => this.props.navigation.navigate('PlaceInfo', obj)}/>
+						<Card city="Budapest" price={882} img={require("../../assets/SH/BUD.jpg")} navigate={(obj) => this.props.navigation.navigate('PlaceInfo', obj)}/>
 					</ScrollView>
 					
 				</View>
@@ -69,15 +72,15 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: "#123C69",
-		paddingTop:30
+		paddingTop:80,
 	},
 	header: {
-		left:15,
 		color:"#fff",
 		fontWeight:'bold',
 		fontSize:30,
 		lineHeight:42,
 		letterSpacing:3,
+		paddingHorizontal:30
 // 		fontFamily: 'Cera-Pro'
 	},
 	SectionStyle: {
@@ -87,13 +90,12 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff',
 		height: 50,
 		borderRadius: 25 ,
-		marginVertical: 30,
-		marginHorizontal: 15,
-		//FIXME shadow doesnt show up
+		margin: 30,
+		//FIXME shadow doesnt show up in android
 		shadowOffset:{  width: 0,  height: 0,  },
 		shadowRadius:20,
 		shadowColor: 'black',
-		shadowOpacity: 1,
+		shadowOpacity: .5,
 	},
 	ImageStyle: {
 		padding: 10,
@@ -106,18 +108,29 @@ const styles = StyleSheet.create({
 	input: {
 		flex:1,
 		fontSize:20,
-		paddingLeft:10
+		paddingLeft:10,
+		height: 50,
+		color:"#707070"
 	},
 	title: {
 		color:"#fff",
 		fontSize:15,
-		left:15,
+		top:20,
+		left:30,
 		marginBottom:15
+	},
+	scroll: {
+		paddingTop:20
 	},
 	cardSelf: {
 		width:250,
 		height:315,
-		marginHorizontal:15
+		marginLeft:30,
+		shadowOffset:{  width: 0,  height: 0,  },
+		shadowRadius:20,
+		shadowColor: 'black',
+		shadowOpacity: .5,
+		backgroundColor:"white",
 	},
 	image: {
 		width:250,
@@ -128,26 +141,30 @@ const styles = StyleSheet.create({
 	info: {
 		width:250,
 		height:100,
-		backgroundColor:"white",
 		borderBottomRightRadius:5,
 		borderBottomLeftRadius:5,
 	},
 	place: {
 		color: "#123C69",
+		fontSize:20,
+		fontWeight:'bold',
 		left:15,
 		top:10
 		
 	},
 	price: {
-		width:120,
-		height:20,
-		borderRadius:10,
+		width:180,
+		height:32,
+		borderRadius:16,
 		left:15,
-		top:10,
-		backgroundColor:"grey",
+		top:20,
+		backgroundColor:"#ebebeb",
 		paddingHorizontal:10
 	},
 	pricetx: {
-		color:"orange"
+		top:3,
+		fontSize:18,
+		fontWeight:'bold',
+		color:"#dd7962"
 	}
 });
