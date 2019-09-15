@@ -1,0 +1,418 @@
+{
+    "cities":[
+        {
+            "cityname":"Amsterdam",
+            "airports":"AMS",
+            "text": "Amsterdam is a multicultural and multinational place called Venice of the North. The city has gained such a nickname due to the many water channels that give it a charming character. In Amsterdam there are a lot of monuments, including Oude Kerk, a church from the thirteenth and fourteenth centuries with the oldest wooden ceiling. Also, there are many wonderful museums, e.g. the Rijksmuseum with collections of masters such as Rembrandt and Vermeer.",
+            "img":"./SH/AMS.jpg"
+        },
+        {
+            "cityname":"Stockholm",
+            "airports":"ARN",
+            "text": "Stockholm, known as the Venice of the North, would have no trouble winning rivalry for the European capital city to be the most originally located – the old town is located on an island occupying a strip of land between the Baltic Sea and the great Mälaren Lake. The vicinities of Stockholm are a mosaic of pine forests, lakes and rocks.",
+            "img":"./SH/ARN.jpg"
+        },
+        {
+            "cityname":"Barcelona",
+            "airports":"BCN",
+            "text": "Plan your holiday in Barcelona! Numerous gardens, parks and 4.5 km of beaches give the capital of Catalonia an advantage over other cities. You can spend time here in many ways: by swimming, fishing, cycling, sunbathing, as well as exploring the historic old town. After an intense day, go to one of the restaurants and enjoy the dishes made of fresh ingredients, usually caught the same day.",
+            "img":"./SH/BCN.jpg"
+        },
+        {
+            "cityname":"Beyrut",
+            "airports":"BEY",
+            "text": "Beirut is an original mix of many cultures, traditions and styles. The capital of Lebanon is an eclectic city that at first glance seems to be a construction site on which monuments slowly give way to modern buildings. Beirut tempts tourists with picturesque views, sandy beaches and rich flavors.",
+            "img":"./SH/BEY.jpg"
+        },
+        {
+            "cityname":"Billund",
+            "airports":"BLL",
+            "text": "Visit the land of children's dreams, Billund. From the moment you land, enjoy the unforgettable view of the largest Legoland in the world and the fabulous Lalandia, then fall into the whirl of crazy activities. Both amusement parks will please the youngest and the older amateurs of building from blocks, riding on carousels and roller coasters or swimming in tropical water parks.",
+            "img":"./SH/BLL.jpg"
+        },
+        {
+            "cityname":"Brussels",
+            "airports":"BRU",
+            "text": "Brussels is a city full of amazing buildings, cafes and greenery. Its historical part is worth visiting on foot, because it is not extensive. During walks you can see amazing murals with the comic characters including Tin Tin, Asterix and Obelix, and Lucky Luke",
+            "img":"./SH/BRU.jpg"
+        },
+        {
+            "cityname":"Budapest",
+            "airports":"BUD",
+            "text": "Budapest is a city with a dual character. On the right side of the Danube you can admire the older Buda, which lies in the hills. On the left, there is flat Pest, which is a craft and trade center. Between them are many picturesque bridges, e.g. historic Chain Bridge. Budapest is famous for its spa character, which owes its thermal baths.",
+            "img":"./SH/BUD.jpg"
+        },
+        {
+            "cityname":"Bydgoszcz",
+            "airports":"BGZ",
+            "text": "Bydgoszcz is a charming city with a relaxed atmosphere. Almost every sunny day in the city center you can meet lovers of kayaking and pedal boats. Most of the tourist attractions are concentrated on the river, and the leitmotif of many of them are water, industry and crafts — including the unique Exploseum and the Museum of Soap and History of Dirt that co-create the TeH2O trail.",
+            "img":"./SH/BGZ.jpg"
+        },
+        {
+            "cityname":"Paris",
+            "airports":"CDG",
+            "text": "Paris is not only the capital of France, but also a legendary city and great metropolis at the Seine river, overshadowed by a well-known architectonic object - the Eiffel tower. For dozens of years Paris has dictated fashion and cultural patterns. Paris has one of the oldest universities in Europe Sorbonne that has given birth to new art movements and ideas.",
+            "img":"./SH/CDG.jpg"
+        },
+        {
+            "cityname":"Corfu",
+            "airports":"CFU",
+            "text": "Flights to Corfu are a great treat for sunbathing and water sports enthusiasts. On this island everyone will find a place for themselves - a piece of sand on a crowded beach, a small bay without tourist hustle or mountain trails. The Corfu citizens clearly indicate their individuality. You can see it in restaurants where local delicacies are served alongside traditional Greek dishes.",
+            "img":"./SH/CFU.jpg"
+        },
+        {
+            "cityname":"Colombo",
+            "airports":"CMB",
+            "text": "Sri Lanka is an island famous for exotic spices, sweet fruits and tea plantations. When planning a Ceylon trip, don’t miss Colombo, a city full of colonial buildings, beautiful Buddhist, Islamic and Catholic temples, skyscrapers and wonderful beaches.",
+            "img":"./SH/CMB.jpg"
+        },
+        {
+            "cityname":"Copenhagen",
+            "airports":"CPH",
+            "text": "The Danish capital is one of the most friendly cities, both for residents and tourists. Copenhagen is located on the coastal lowland and an island densely cut by canals. Most of the monuments and tourist attractions can be reached by bike or while walking. One of the most popular tourist attractions is Christiania - a district that still remembers crazy sixties.",
+            "img":"./SH/CPH.jpg"
+        },
+        {
+            "cityname":"Dubrovnik",
+            "airports":"DBV",
+            "text": "Dubrovnik is vibrant city that never sleeps. There are many museums and monuments - its old town was inscribed on the UNESCO World Heritage List. An interesting fact is that in the city you can see places known from the \"Game of Thrones\" series, including St. Dominic Street and Bokar or Minceta Fortress.",
+            "img":"./SH/DBV.jpg"
+        },
+        {
+            "cityname":"Delhi",
+            "airports":"DEL",
+            "text": "A journey through Delhi is like using a time machine. On the one hand, it is a modern city full of spectacular office buildings, sumptuous shopping centers, and centers that excel in futuristic information and telecommunications technologies. On the other hand, Delhi has three monuments, which were inscribed on the UNESCO List. Visit in Delhi is a great opportunity to taste local delicacies: curry, samosa or naan.",
+            "img":"./SH/DEL.jpg"
+        },
+        {
+            "cityname":"Moscow",
+            "airports":"DME",
+            "text": "Moscow is both Russia in a nutshell and a place definitely different from the rest of the country. If one looks at the list of tourist attractions, no matter if you likes huge cities bustling with life or avoid them like the plague, Moscow is an obligatory travel destination in Russia, as well as one of the most important tourist destinations in Europe. The architecture of socialist realism expressing the power of the state is very interesting.",
+            "img":"./SH/DME.jpg"
+        },
+        {
+            "cityname":"Yerevan",
+            "airports":"EVN",
+            "text": "When planning a trip to the Caucasus, you should consider Yerevan, the energetic capital of Armenia. The Republic Square is surrounded by monumental office buildings built of yellow and pink tuff — volcanic ash. When being in the city center you can go to the Museum of Armenian History and learn about the oldest Christian state. You also might be interested in a walk through the Cascades to see Ararat over pink tuff buildings.",
+            "img":"./SH/EVN.jpg"
+        },
+        {
+            "cityname":"Gdańsk",
+            "airports":"GDN",
+            "text": "Gdańsk is an important center of cultural life and one of the most beautiful Polish cities. The most famous monument in Gdańsk is the Neptune Fountain - a symbol of the city and a certificate of craftsmanship of the inhabitants of Gdańsk. Next to it there is the Artus Court, whose name was taken from the legend of King Arthur. In the Main Town, at Długi Targ Street, there is the Golden Tenement House - one of the most beautiful buildings in the city.",
+            "img":"./SH/GDN.jpg"
+        },
+        {
+            "cityname":"Geneva",
+            "airports":"GVA",
+            "text": "Geneva, as well as the whole Switzerland, is associated with chocolate and watches, but these are not the only products worth buying there. In Geneva, it is worth going for fashion shopping. Although the city center is full of boutiques of the best world brands, the flea market Plaine de Plainpalais, where you can find fashion retro things, is also interesting.",
+            "img":"./SH/GVA.jpg"
+        },
+        {
+            "cityname":"Hannover",
+            "airports":"HAJ",
+            "text": "When planning spring trips, you should consider Hannover. This city has the largest urban forest in Europe, as well as many smaller green areas. It also has a wide range of entertainment: museums, theaters and music clubs every day present an interesting cultural offer.",
+            "img":"./SH/HAJ.jpg"
+        },
+        {
+            "cityname":"Hamburg",
+            "airports":"HAM",
+            "text": "Port cities enthusiasts definitely should go to Hamburg. After an exciting boat cruise, it is worth warming up in one of the coastal restaurants, and then go to the museum of miniatures, which houses the world’s longest train model.",
+            "img":"./SH/HAM.jpg"
+        },
+        {
+            "cityname":"Kharkiv",
+            "airports":"HRK",
+            "text": "Kharkov is an ideal place for culinary fans and amateurs of history. Enthusiasts of Ukrainian cuisine can try local specialties, including the famous pielmieni. When visiting Kharkov, it is worth going to the Monastery of the Mother of God from the seventeenth century, the nineteenth-century Council of the Annunciation, fragments of seventeenth-century walls and the military cemetery of the victims of totalitarianism.",
+            "img":"./SH/HRK.jpg"
+        },
+        {
+            "cityname":"Seoul",
+            "airports":"ICN",
+            "text": "Seoul is a fashionable and technologically advanced city, and at the same time very traditional. The capital of South Korea dynamically grows and develops, captivating its heritage at the same time. In the city you can see Bukchon, traditional Korean houses, which contrast with the skyscrapers. It is also worth going to Changdeokgung and Gyeongbokgung, places with rich histories.",
+            "img":"./SH/ICN.jpg"
+        },
+        {
+            "cityname":"Zielona Góra",
+            "airports":"IEG",
+            "text": "Flight to Zielona Góra is an ideal opportunity to catch the sun in the bosom of nature. The Lubuskie Voivodeship offers unusual facilities. Among them there are the bat parks, where are 30,000 specimens, and the National Park that is home to 270 species of birds.",
+            "img":"./SH/IEG.jpg"
+        },
+        {
+            "cityname":"Kiev",
+            "airports":"IEV",
+            "text": "History fans will certainly enjoy Kiev. It is one of the oldest cities in Eastern Europe. Kiev delights visitors with beautiful monuments. Literature enthusiasts can also visit the mysterious museum of Mikhail Bulgakov, the author of \"The Master and Margarita\".",
+            "img":"./SH/IEV.jpg"
+        },
+        {
+            "cityname":"Istambul",
+            "airports":"IST",
+            "text": "Istanbul is a magical place where the west meets with the east. Its location and long history have made it a culturally diverse city. Despite the destruction, the city abounds in many wonderful monuments from the Byzantine and Ottoman periods. When traveling, it is worth trying the local cuisine, as diverse as the city's heritage.",
+            "img":"./SH/IST.jpg"
+        },
+        {
+            "cityname":"New York",
+            "airports":"JFK",
+            "text": "New York, along with famous attractions such as Times Square, Central Park, the Empire State Building and Yankee Stadium, has become a cult metropolis. There are famous entertainment and art institutions. Most theaters and other cultural centers are located in and around Times Square, most of all on Broadway.",
+            "img":"./SH/JFK.jpg"
+        },
+        {
+            "cityname":"Kaliningrad",
+            "airports":"KGD",
+            "text": "Kaliningrad is a magical port city. It owes its popularity to numerous monuments - including urban fortifications and beautiful churches, some of which currently have cultural and recreational functions. During a visit to this city, it is worth visiting Amalienau, a villa settlement that survived the war.",
+            "img":"./SH/KGD.jpg"
+        },
+        {
+            "cityname":"Chisinau",
+            "airports":"KIV",
+            "text": "During walks in Chisinau you can see many interesting places. When visiting Chisinau, it is worth going to the National Museum of the History of Moldova. A characteristic feature of this place is the monument of the she-wolf with Romulus and Remus standing in front of the main entrance.",
+            "img":"./SH/KIV.jpg"
+        },
+        {
+            "cityname":"Kracow",
+            "airports":"KRK",
+            "text": "Cracow boasts many impressive architectural monuments, museums, galleries, cozy cafes and restaurants. The most famous monument is the Wawel Castle. The castle has numerous rooms, interesting exhibits and undergrounds. During the visit in the Wawel Castle, take a moment to look at the views that extend from its peak.",
+            "img":"./SH/KRK.jpg"
+        },
+        {
+            "cityname":"Košice",
+            "airports":"KSC",
+            "text": "Košice is a city that is attractive to tourists both during the day and at night. The cultural capital, both classical and unconventional, is developing intensively. Košice is also famous for the largest concentration of monuments in the country - there are 460 historic buildings on Hlavná street.",
+            "img":"./SH/KSC.jpg"
+        },
+        {
+            "cityname":"Kaunas",
+            "airports":"KUN",
+            "text": "Kaunas is a diverse city. It boasts a beautiful old town with a 16th-century town hall and charming restored tenement houses. There are also the ruins of the oldest Lithuanian castle, which constantly attracts tourists.",
+            "img":"./SH/KUN.jpg"
+        },
+        {
+            "cityname":"Los Angeles",
+            "airports":"LAX",
+            "text": "Los Angeles is a city connected with nature, where bustling neighborhoods combine with golden beaches and hills densely woven by plants. It is also a global center of creativity and entertainment. It attracts courageous dreamers and creators to realize their visions on stages and film studios.",
+            "img":"./SH/LAX.jpg"
+        },
+        {
+            "cityname":"London",
+            "airports":"LHR",
+            "text": "London is one of the largest European cities. It is famous for its rich artistic and musical scene as well as many museums. Visitors can also see a lot of monuments, some of which have been included in the UNESCO World Heritage List. Before visiting London it's worth remembering that it is the least rainy city in the UK.",
+            "img":"./SH/LHR.jpg"
+        },
+        {
+            "cityname":"Luxembourg",
+            "airports":"LUX",
+            "text": "It may seem that Luxembourg is a boring city of economists, bankers and officials. Nothing could be more wrong. The city's location invites to have some walks. While hiking, go to the Adolf Bridge, as well as casemates carved in the Bock rock.",
+            "img":"./SH/LUX.jpg"
+        },
+        {
+            "cityname":"Lviv",
+            "airports":"LWO",
+            "text": "A walk along the streets of Lviv is a treat for enthusiasts of modernism. Next to numerous monuments there are many pearls of modernist architecture. Lviv is also famous for its majestic memorials. One of the most popular is Adam Mickiewicz’s statue.",
+            "img":"./SH/LWO.jpg"
+        },
+        {
+            "cityname":"Sidney",
+            "airports":"SYD",
+            "text":"Sydney is surrounded by national parks. Their greenery penetrates into the city's space, and surrounds skyscrapers and houses. The seaside scenery is charming: the harbor and the golden beaches encourage to rest. This city never sleeps because there is always something new to discover - bars, restaurants, pubs, concerts and festivals. This is one of our many connections to Asia, Australia and New Zealand, prepared with partner airlines with a convenient transfer in Singapore.",
+            "img":"./SH/SYD.jpg"
+        },
+        {
+            "cityname":"Kuala Lumur",
+            "airports":"KUL",
+            "text":"A visit to the capital of Malaysia is a feast for all the senses. The city landscape is decorated with skyscrapers, minarets and lush parks. The walks are accompanied by amazing aromas of freshly prepared dishes and drinks. Kuala Lumpur is characterized by multiculturalism which is perfectly reflected in the colorful Chinatown and fragrant Little India. This is one of our many connections to Asia, Australia and New Zealand, prepared with partner airlines with a convenient transfer in Singapore.",
+            "img":"./SH/KUL.jpg"
+        },
+        {
+            "cityname":"Phuket",
+            "airports":"HKT",
+            "text":"The largest and most diverse island of Thailand, Phuket, tempts tourists with an extraordinary charm. Beaches surrounded by palm trees encourage relaxation, and crystal water invites to dive. On the other hand, there are tropical reserves, national parks and mysterious caves waiting for the brave travelers. This is one of our many connections to Asia, Australia and New Zealand, prepared with partner airlines with a convenient transfer in Singapore.",
+            "img":"./SH/HKT.jpg"
+        },
+        {
+            "cityname":"Bali",
+            "airports":"DPS",
+            "text":"Bali is famous for its golden beaches, spectacular waterfalls and volcanoes. The Indonesian paradise also has beautiful architecture and rich culture. Bali is also an ideal place for beginners and advanced surfers who can catch the perfect wave. This is one of our many connections to Asia, Australia and New Zealand, prepared with partner airlines with a convenient transfer in Singapore. ",
+            "img":"./SH/DPS.jpg"
+        },
+        {
+            "cityname":"Bangkok",
+            "airports":"BKK",
+            "text":"Bangkok belongs to those Asian metropolises that never fall asleep. Around the clock you can see speeding tuk-tuks, eat aromatic street food delicacies and enjoy the bustle of this amazing city. During your stay, you can go to the Temple of the Wat Phra Kaew and the Grand Palace, the flagship attractions of the Thai capital. This is one of our many connections to Asia, Australia and New Zealand, prepared with partner airlines with a convenient transfer in Singapore.",
+            "img":"./SH/BKK.jpg"
+        },
+        {
+            "cityname":"Toronto",
+            "airports":"YYZ",
+            "text":"Toronto is a multicultural city. Almost every day there are extraordinary festivals, shows, exhibitions and sports competitions. It's worth to remember, that Canadians especially love hockey. ",
+            "img":"./SH/YYZ.jpg"
+        },
+        {
+            "cityname":"Warsaw",
+            "airports":"WAW",
+            "text":"Warsaw is a city that combines history and modernity. When visiting the capital of Poland, it is worth seeing the Museum of the Warsaw Uprising, which, through multimedia presentations, tells the story of the insurgents. Take a chance to get lost in the historic streets of the Old Town or in the thicket of modern skyscrapers in the city center.",
+            "img":"./SH/WAW.jpg"
+        },
+        {
+            "cityname":"Vienna",
+            "airports":"VIE",
+            "text":"Travel to the capital of Austria is a treat for art lovers. Vienna is called the City of Music, but amateurs of other arts will also enjoy their trip. It is also appreciated by sweet enthusiasts, because the Viennese Sacher Cake is called the king of desserts.",
+            "img":"./SH/VIE.jpg"
+        },
+        {
+            "cityname":"Venice",
+            "airports":"VEN",
+            "text":"Venice is called one of the most beautiful cities in the world. Not without reason. Mysterious alleys, the sound of water and beautiful churches build an amazing atmosphere. During the visit in Venice it is worth to take part in gondola trip.",
+            "img":"./SH/VEN.jpg"
+        },
+        {
+            "cityname":"Varna",
+            "airports":"VAR",
+            "text":"The holiday climate and sandy beaches are waiting on the west coast of the Black Sea. Varna invites visitors with its history, monuments and museums, as well as nearby resorts. From the city center you can go on a day trip to the popular Golden Sands and the charming town, Balchik.",
+            "img":"./SH/VAR.jpg"
+        },
+        {
+            "cityname":"Berlin",
+            "airports":"TXL",
+            "text":"Berlin is a city of contrasts. In addition to a mix of different styles, you can come across a variety of tourist attractions. The most popular of them are those related to culture and history, e.g. Brandenburg Gate, the Red Town Hall, the Reichstag and the Berlin Cathedral.",
+            "img":"./SH/TXL.jpg"
+        },
+        {
+            "cityname":"Tallinn",
+            "airports":"TLL",
+            "text":"During wandering the picturesque streets, alleys and squares of the Tallinn, you can admire a number of magnificent buildings and monuments. A UNESCO World Heritage, Tallinn's old town is one of the most beautiful urban development complexes on the Baltic countries. Numerous restaurants, cafes, pubs and clubs opened until late night hours lure fun lovers.",
+            "img":"./SH/TLL.jpg"
+        },
+        {
+            "cityname":"Podgorica",
+            "airports":"TGD",
+            "text":"Eclectic Podgorica is a city with amazing heritage. There are Ottoman ruins, brutalist blocks, majestic sacred buildings and glittering shopping centers. The city is also decorated with amazing bridges - the modern Millenium nad Moraca and the stone over Ribnica. In the evenings, life flourishes in cafes and bars near Hercegovacka and Slobode.",
+            "img":"./SH/TGD.jpg"
+        },
+        {
+            "cityname":"Tbilisi",
+            "airports":"TBS",
+            "text":"The Pearl of the Caucasus - Tbilisi - is a charming city where folklore, monuments and Georgian hospitality attract crowds of tourists. The capital of Georgia has always been a city of artists and it still impresses with numerous theaters, sculptures, monuments and picturesque architecture. You can see them in the Old Town. Tbilisi also dazzles with a view from the top — a gondola lift takes you to the hilltop statue of the Mother of Georgian, and the funicular to the Mtatsminda.",
+            "img":"./SH/TBS.jpg"
+        },
+        {
+            "cityname":"Olsztyn",
+            "airports":"SZY",
+            "text":"The airport in Olsztyn is the gateway to the land of the Great Masurian Lakes, an ideal place for water sports lovers and nature enthusiasts. It is also a treat for fans of history, because in the region there are numerous monuments, including Teutonic castles, palaces, water mills, fortifications and sacred objects.",
+            "img":"./SH/SZY.jpg"
+        },
+        {
+            "cityname":"Stuttgart",
+            "airports":"STR",
+            "text":"The domain of Stuttgart are pearls of architecture and motorization. It owes great design to French inspirations and the German order, which gave the metropolis an extraordinary charm. An original example of great building is the Kunstmuseum, which also hosts the work of numerous artists. On the other hand, car enthusiasts can go to the Mercedes Benz and Porsche museums, where they will learn a lot about the history of legendary cars.",
+            "img":"./SH/STR.jpg"
+        },
+        {
+            "cityname":"Sofia",
+            "airports":"SOF",
+            "text":"Sofia, the capital of Bulgaria and the largest city in the country, is one of the oldest cities of Europe. Since antiquity, the place has been influenced by both eastern and western traditions; and, as a result, Sofia is an extremely diverse city with rich tradition and culture. You can see the miraculous stone Orthodox churches, huge socialist-realist buildings, vibrant streets, and dark housing estates on the outskirts.",
+            "img":"./SH/SOF.jpg"
+        },
+        {
+            "cityname":"Skopje",
+            "airports":"SKP",
+            "text":"Skopje is a city at the crossroads of East and West. A small capital of Macedonia is an amazing mix of cultures and architectural styles. It is a cluster of many monuments and replicas, including the Arc de Triomphe in Paris.",
+            "img":"./SH/SKP.jpg"
+        },
+        {
+            "cityname":"Singapore",
+            "airports":"SIN",
+            "text":"Fly to Singapore - one of the most friendly places in the world. It is really popular among travelers because it is a gateway to other exotic destinations. However, it is worth considering a longer stay in the City of Lion. Exotic districts drawing from diverse cultures make it possible to move to another Asian region - India, China or Arab countries - with every meal.",
+            "img":"./SH/SIN.jpg"
+        },
+        {
+            "cityname":"Riga",
+            "airports":"RIX",
+            "text":"At first glance, Riga seems to be dominated by Gothic towers, but the soul of this bustling city is built by Art Nouveau. It is enriched by charming bars, contemporary art centers and experimental restaurants. On the outskirts of Riga, you can take a break from the hustle and bustle of the city and go for a walk through the forests full of berries.",
+            "img":"./SH/LWO.jpgRIX"
+        },
+        {
+            "cityname":"Prague",
+            "airports":"PRG",
+            "text":"Prague's history dates back to the first millennium, and its traces are still visible in the city. Wandering along the cobbled streets you can come across ancient chapels as well as Gothic and Baroque cathedrals. Prague galleries with wide collections, and sculptures scattered around the city diversify sightseeing.",
+            "img":"./SH/PRG.jpg"
+        },
+        {
+            "cityname":"Palanga",
+            "airports":"PLQ",
+            "text":"Fly to the land of Amber - Palanga - one of the largest Lithuanian resorts on the coast of the Baltic Sea. The pier, beautiful and clean beaches, the spa climate and the surrounding of pine forests make it an ideal place for a family holiday. The city is full of pastel restaurants, bars and stalls where you can taste local delicacies served with a caraway.",
+            "img":"./SH/PLQ.jpg"
+        },
+        {
+            "cityname":"Beijing",
+            "airports":"PEK",
+            "text":"Beijing is famous for its unusual diversity and contradictions. Contrasts can be seen in the city from the first sight - old temples from the imperial times are mixed with modern, glass skyscrapers. The size of the metropolis and the crowds in it are also dazzling. Beijing is more than 30 times bigger than Warsaw and it is inhabited by almost 20 million people. The biggest attraction is the Forbidden City - the seat of the Emperors of the Ming and Qing dynasties from the fifteenth century.",
+            "img":"./SH/PEK.jpg"
+        },
+        {
+            "cityname":"Bucharest",
+            "airports":"OTP",
+            "text":"Bucharest is a city of impressive buildings. The monumental Palace of the Parliament is the largest civilian and administrative building in the world. For its construction, one million cubic meters of marble were used, as well as three and a half thousand tons of crystal. The Romanian capital architects were inspired by French colleagues, so the city was called as Little Paris — it even has its own Arcul de Triumf — a local version of the Arc de Triomphe.",
+            "img":"./SH/OTP.jpg"
+        },
+        {
+            "cityname":"Oslo",
+            "airports":"OSL",
+            "text":"The Norwegian capital is a unique place. Modern buildings are accompanied by amazing natural assets - fjords, mountains, beautiful forests and parks. Oslo is also famous for its diverse artistic and culinary offer, as well as for its rich nightlife. In the heart of the city there are many museums, and music clubs, as well as one of the most famous buildings - the spectacular Opera House.",
+            "img":"./SH/OSL.jpg"
+        },
+        {
+            "cityname":"Chicago",
+            "airports":"ORD",
+            "text":"Chicago is a unique place for fans of architecture and art. Everywhere there are beautiful skyscrapers, original statues, museums and galleries. Apart from sightseeing and admiring the art, it is also worth going to one of many Michelin-star restaurants.",
+            "img":"./SH/ORD.jpg"
+        },
+        {
+            "cityname":"Odessa",
+            "airports":"ODS",
+            "text":"Located in the southern Ukraine, Odessa is a city with 300 sunny days per year. Located on the hills of the Odessa Bay, it is one of the most important Black Sea ports. It is one of the best places for sunbathing and swimming lovers. It also has a dolphinarium for youngest tourists.",
+            "img":"./SH/ODS.jpg"
+        },
+        {
+            "cityname":"Nuremberg",
+            "airports":"NUE",
+            "text":"Nuremberg is the second largest city of Bavaria. Its historical part of the city is surrounded by the medieval fortifications. During visit in Nuremberg it is worth seeing the castle on the top of the hill and a Toy Museum, which currently has 65,000 exhibits.",
+            "img":"./SH/NUE.jpg"
+        },
+        {
+            "cityname":"Tokyo",
+            "airports":"NRT",
+            "text":"Fans of urban hustle and exotic flavors will definitely enjoy Tokyo. The city is full of life by day and by night. During a travel to the capital of the Land of the Rising Sun visit one of the most crowded crossings in the world - Shibuya Crossing. Later go to one of the most expensive districts of Tokyo - Ginza, and try local sushi at one of famous fish markets.",
+            "img":"./SH/NRT.jpg"
+        },
+        {
+            "cityname":"Milan",
+            "airports":"MXP",
+            "text":"When visiting Milan, the capital of fashion and design, it is worth seeing one of the largest cathedrals in the world. It is located at Piazza Duomo. Nearby, there is the Gallery of Victor Emmanuel II, which impresses with its unique architecture. Gallery's buildings come from the 19th century and have numerous decorations, and the whole is covered with a glass dome.",
+            "img":"./SH/MXP.jpg"
+        },
+        {
+            "cityname":"Munich",
+            "airports":"MUC",
+            "text":"Fans of motoring or art will appreciate the Bavarian capital. This original combination means that the city is full of life and various events, including the legendary Oktoberfest.",
+            "img":"./SH/MUC.jpg"
+        },
+        {
+            "cityname":"Minsk",
+            "airports":"MSQ",
+            "text":"Minsk is a city of nearly 2 million inhabitants with exceptional architecture, unique cuisine and rich nightlife. In Minsk you can see monumental socialist architecture and amazing urban design. The city is full of vast squares and spacious avenues. Main street of Minsk is over 10 kilometres long and in the broadest place it has 48 metres.",
+            "img":"./SH/MSQ.jpg"
+        },
+        {
+            "cityname":"Miami",
+            "airports":"MIA",
+            "text":"Miami is a city with an unusual charm. Art deco buildings, tropical motives and pastel shades create a cinematic scenery for walks. The moonlight encourages to participate in all-night events, during which the salsa reigns on the dance floor. Miami is a place of creative people who create amazing things - from atypical culinary connections, through great design and architectural projects, to bold art.",
+            "img":"./SH/MIA.jpg"
+        },
+        {
+            "cityname":"Madrid",
+            "airports":"MAD",
+            "text":"Madrid is a charming city. It is famous for both beautiful architecture and excellent museums. Their offer includes works by Pablo Picasso and Salvador Dalí. The Spanish capital loves fiesta, and every day the bars and clubs are full of music. ",
+            "img":"./SH/MAD.jpg"
+        }
+    ]
+}
