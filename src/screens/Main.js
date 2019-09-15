@@ -19,6 +19,7 @@ const Card = ({city, img, price, ...props}) => {
 // 	console.log(props.navigate)
 	return (
 		<TouchableOpacity style={styles.cardSelf} {...props} onPress={()=>props.navigate({city:city,price:price,img:img})}>
+			<View style={[styles.pin, styles.pind]}/>
 			<Image style={styles.image} source={img}></Image>
 			<View style={styles.info}>
 				<Text style={styles.place}>{city}</Text>
@@ -61,6 +62,11 @@ export default class Main extends React.Component{
 						<Card city="Budapest" price={882} img={require("../../assets/SH/BUD.jpg")} navigate={(obj) => this.props.navigation.navigate('PlaceInfo', obj)}/>
 					</ScrollView>
 					
+					<TouchableOpacity style={styles.flights}>
+						<View style={[styles.pin, styles.pinf]}/>
+						<Text style={styles.label}>My flights</Text>
+					</TouchableOpacity>
+					
 				</View>
 			)
 	}
@@ -77,9 +83,8 @@ const styles = StyleSheet.create({
 	header: {
 		color:"#fff",
 		fontWeight:'bold',
-		fontSize:30,
+		fontSize:25,
 		lineHeight:42,
-		letterSpacing:3,
 		paddingHorizontal:30
 // 		fontFamily: 'Cera-Pro'
 	},
@@ -126,11 +131,8 @@ const styles = StyleSheet.create({
 		width:250,
 		height:315,
 		marginLeft:30,
-		shadowOffset:{  width: 0,  height: 0,  },
-		shadowRadius:20,
-		shadowColor: 'black',
-		shadowOpacity: .5,
 		backgroundColor:"white",
+		borderRadius:5,
 	},
 	image: {
 		width:250,
@@ -166,5 +168,34 @@ const styles = StyleSheet.create({
 		fontSize:18,
 		fontWeight:'bold',
 		color:"#dd7962"
+	},
+	flights: {
+		backgroundColor:"#fff",
+		height:87,
+		width:315,
+		left:30,
+		borderRadius:5,
+	},
+	label: {
+		top:30,
+		left:90,
+		color:"#123C69",
+		fontSize:18,
+		fontWeight:'bold',
+	},
+	pin: {
+		zIndex:50,
+		position:'absolute',
+		height:35,
+		width:35,
+		top:-17.5,
+		borderRadius:17.5,
+		backgroundColor:"#123C69"
+	},
+	pinf: {
+		left:140,
+	},
+	pind: {
+		left:107.5,
 	}
 });

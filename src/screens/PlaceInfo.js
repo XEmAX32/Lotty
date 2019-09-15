@@ -1,6 +1,8 @@
 import React from 'react'
 import {View, StyleSheet, Text, Image, ScrollView, TouchableOpacity} from 'react-native'
 import Ticket from '../components/Ticket'
+import CloseIco from '../components/CloseIco'
+
 
 const places = require('../../assets/Places.json')
 
@@ -28,6 +30,9 @@ class PlaceInfo extends React.Component {
 		
 		return (
 			<ScrollView style={styles.container} vertical  showsVerticalScrollIndicator={false}>
+				<TouchableOpacity style={{position:'absolute',top:80, left:30, zIndex:50}} onPress={() => this.props.navigation.goBack()}>
+					<CloseIco/>
+				</TouchableOpacity>
 				<Image source={img} style={styles.image}/>
 				<View style={styles.info}>
 					<Text style={styles.place}>{city}</Text>
@@ -80,7 +85,8 @@ const styles = StyleSheet.create({
 		width:315,
 		height:87,
 		left:30,
-		borderRadius:5
+		borderRadius:5,
+		
 	},
 	pinL: {
 		height:35,
