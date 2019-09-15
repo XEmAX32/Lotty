@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import Svg, { G, Path, Text, TSpan } from 'react-native-svg'
-
-const Ticket = props => (
-	<Svg width={315} height={87} {...props}>
-	<G data-name="Group 19">
-	<Path
-	data-name="Path 12"
-	d="M300 43a15 15 0 0115-15V5a5 5 0 00-5-5H5a5 5 0 00-5 5v23a15 15 0 010 30v24a5 5 0 005 5h305a5 5 0 005-5V58a15 15 0 01-15-15z"
-	fill="#123c69"
-	/>
-	<Text
-	data-name="Get your ticket now"
-	transform="translate(158 50)"
-	fill="#fff"
-	fontSize={20}
-	fontFamily="CeraPro-Bold, Cera Pro"
-	fontWeight={700}
-	>
-	<TSpan x={-94.79} y={0}>
-	{'Get your ticket now'}
-	</TSpan>
-	</Text>
-	</G>
-	</Svg>
-)
-
-export default Ticket
-=======
 import React from 'react';
 import {
     View,
@@ -39,8 +9,10 @@ import AirplaneIcon from '../components/AirplaneIcon';
 import LotLogo from '../components/LotLogo';
 import FlipCard from 'react-native-flip-card'
 
-export default function Ticket({name,arrival,departure,flight}) {
-    return (
+export default function Ticket({name,arrival,departure,flight, ...props}) {
+    
+	console.log(arrival.hour)
+	return (
         <FlipCard 
             flipVertical={false}
             flipHorizontal={true}
@@ -51,7 +23,7 @@ export default function Ticket({name,arrival,departure,flight}) {
             alignWidth={true}
 
         >  
-            <View>
+            <View {...props}>
                 <View style={styles.top}>
                     <View style={{top:-10,backgroundColor: '#123C69',width: 20,height:20,borderBottomEndRadius:20,borderBottomStartRadius:20}}/>
                     <Text style={styles.name}>{name}</Text>
@@ -106,7 +78,7 @@ export default function Ticket({name,arrival,departure,flight}) {
                     </View>
                 </View>
             </View>
-            <View style={[styles.container,{backgroundColor: '#fff',borderRadius:10,alignItems:'center'}]}>
+            <View style={[styles.container,{backgroundColor: '#fff',borderRadius:10,alignItems:'center', marginTop:10}]}>
                 <View style={{top:-10,backgroundColor: '#123C69',width: 20,height:20,borderBottomEndRadius:20,borderBottomStartRadius:20}}/>
                 <Image style={{width:250,height:250}} source={{uri: 'https://www.qr-code-generator.com/wp-content/themes/qr/new_structure/markets/core_market_full/generator/dist/generator/assets/images/websiteQRCode_noFrame.png'}} />
             </View>
@@ -120,6 +92,7 @@ const styles = StyleSheet.create({
         height:350,
     },
     top: {
+        marginTop:10,
         height: 50,
         backgroundColor: '#FFF',
         alignItems: 'center',
@@ -163,4 +136,3 @@ const styles = StyleSheet.create({
         color: '#123C69'
     }
 })
->>>>>>> 659e170b6fc55605704df3a4be4046b42ba2d834

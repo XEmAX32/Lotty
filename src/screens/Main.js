@@ -42,9 +42,6 @@ export default class Main extends React.Component{
 	
 	render() {
 		
-		//TODO in scrollview read peter's json and map
-		//TODO my flights button?
-		
 			return (
 				
 				<View style={styles.container}>
@@ -62,7 +59,7 @@ export default class Main extends React.Component{
 						<Card city="Budapest" price={882} img={require("../../assets/SH/BUD.jpg")} navigate={(obj) => this.props.navigation.navigate('PlaceInfo', obj)}/>
 					</ScrollView>
 					
-					<TouchableOpacity style={styles.flights}>
+					<TouchableOpacity style={styles.flights} onPress={() => this.props.navigation.navigate('MyFlights')}>
 						<View style={[styles.pin, styles.pinf]}/>
 						<Text style={styles.label}>My flights</Text>
 					</TouchableOpacity>

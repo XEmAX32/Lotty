@@ -4,8 +4,9 @@ import { createStackNavigator } from 'react-navigation-stack';
 import Main from './src/screens/Main';
 import { createAppContainer } from 'react-navigation';
 import ChatBot from './src/screens/ChatBot'
-// import PlaceInfo from './src/screens/PlaceInfo'
-
+import PlaceInfo from './src/screens/PlaceInfo'
+import FlighInformation from './src/screens/FlighInformation'
+import MyFlights from './src/screens/MyFlights'
 
 const AppRouter = createStackNavigator(
 	{
@@ -14,10 +15,16 @@ const AppRouter = createStackNavigator(
 		},
 		ChatBot: {
 			screen: ChatBot
-		}
-		/*PlaceInfo: {
+		},
+		PlaceInfo: {
 			screen: PlaceInfo
-		}*/
+		},
+		FlighInformation: {
+			screen: FlighInformation
+		},
+		MyFlights: {
+			screen: MyFlights
+		}
 	},
 	{
 		headerMode: 'none',
