@@ -30,19 +30,11 @@ const AppRouterContainer = createAppContainer(AppRouter);
 class App extends React.Component {
 	
 	render(){
-<<<<<<< HEAD
-    
-    return (
-      <AppRouterContainer />
-    );
-  }
-=======
 		
 		return (
 			<AppRouterContainer />
 		);
 	}
->>>>>>> 4a5fee8767d0679f4511a4cc13d2486610d64581
 }
 
 export default App;
