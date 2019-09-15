@@ -14,6 +14,7 @@ import ChatPicker from '../components/ChatPicker';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Amplify, { Interactions } from 'aws-amplify';
 import awsconfig from '../../aws-exports';
+import ExitIcon from '../components/ExitIcon';
 
 Amplify.configure(awsconfig);
 
@@ -242,7 +243,9 @@ export default class ChatBot extends React.Component{
         this.getAirports();
         return (
             <View style={styles.container}>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('Main')}><Text>hey</Text></TouchableOpacity>
+                <View style={{alignItems:'center'}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Main')}><ExitIcon /></TouchableOpacity>
+                </View>
                 <Text style={styles.title}>Let’s find your perfect flight.</Text>
                 <KeyboardAvoidingView style={styles.bottomContainer} behavior="padding" enabled>                    
                     <View style={styles.questionContainer}>
@@ -344,7 +347,11 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: 'bold',
         color: '#FFF',
-        fontSize: 25
+        fontSize: 25,
+        width: 200,
+        marginBottom:20,
+        marginLeft:20,
+        marginTop: 20
     },
     inputContainer: {
         marginBottom: 40
