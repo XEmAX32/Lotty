@@ -3,150 +3,68 @@ import {
     View,
     StyleSheet,
     SafeAreaView,
+    ScrollView,
     Dimensions,
     KeyboardAvoidingView,
     TextInput,
     Text,
+    Image
 } from 'react-native';
-import ChatText from '../components/ChatText'
-import ChatDate from '../components/ChatDate';
-import ChatPicker from '../components/ChatPicker';
+import * as Location from 'expo-location';
+import * as Permissions from 'expo-permissions';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Amplify, { Interactions } from 'aws-amplify';
 import awsconfig from '../../aws-exports';
 import ExitIcon from '../components/ExitIcon';
 
-Amplify.configure(awsconfig);
-
-
-
-async function test() {
-    let userInput = "book";
-
-
-    const response = await Interactions.send("lot_lot", userInput);
-    console.log(response)
-}
-
-test();
-
 const { height,width } = Dimensions.get('window');
-
-const interactionList = [
-    {   
-        id:1,
-        type: 'text',
-        content: "Hi my name is Lotty and I'm your booking assistant!",
-        relation: 0
-    },
-    {   
-        id:2,
-        type: 'text',
-        content: 'Where do you want to fly from?',
-        relation: 0
-    },
-    {
-        id: 3,
-        type: 'picker',
-        relation: 1,
-        selected: null,
-        options: [{label:'ciao',value:'ciao'},{label:'hello',value:'hello'}]
-    },
-    {   
-        id:4,
-        type: 'text',
-        content: 'How many passengers will be flying?',
-        relation: 0
-    },
-    {
-        id: 5,
-        type: 'textinput',
-        relation: 1
-    },
-    {
-        id:6,
-        type: 'text',
-        content: "When do you want to fly?",
-        relation: 0
-    },
-    {
-        id:7,
-        type: 'datepicker',
-        date: new Date(),
-        relation: 1
-    },
-    {
-        id:8,
-        type: 'text',
-        content: "Which class do you want?",
-        relation: 0
-    },
-    {
-        id:9,
-        type:'picker',
-        relation: 1,
-        selected: null,
-        options: [{label:'ciao',value:'ciao'},{label:'hello',value:'hello'}]    
-    },
-    {
-        id:10,
-        type: 'text',
-        content: "Which place do you prefere?",
-        relation: 0
-    },
-    {
-        id:11,
-        type:'picker',
-        relation: 1,
-        selected: null,
-        options: [{label:'ciao',value:'ciao'},{label:'hello',value:'hello'}]    
-    },
-    {
-        id:12,
-        type: 'text',
-        content: "Do you have any extra lagguage?",
-        relation: 0
-    },
-    {
-        id:13,
-        type:'picker',
-        relation: 1,
-        selected: null,
-        options: [{label:'ciao',value:'ciao'},{label:'hello',value:'hello'}]    
-    }
-]
-
-const hints = ["malpensa"]
 
 export default class ChatBot extends React.Component{
 
+    constructor() {
+        super();
+    }
+
     componentDidMount() {
-        setTimeout(() => this.callChatBot(),2000);
+        this.callChatBot()
     }
 
-    constructor(props){
-        super(props);
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
-        setTimeout(() => this.next(),0)
 
-
+    componentWillMount() {
+        Amplify.configure(awsconfig);
+        console.log('working component')
+        this._getLocationAsync();
     }
 
-    callChatBot = async () => {
-        const response = await Interactions.send("lot_lot", this.state.response == '' ? 'book' : this.state.response);
+    _getLocationAsync = async () => {
+        let { status } = await Permissions.askAsync(Permissions.LOCATION);
+
+        let location = await Location.getCurrentPositionAsync({});
+        console.log(location)
+
+        const reverseGeocode = await Location.reverseGeocodeAsync({latitude: location.coords.latitude, longitude: location.coords.longitude})
+        console.log(reverseGeocode)
+        this.setState({hints: [reverseGeocode[0].city+' '+reverseGeocode[0].country]})
+      };
+    
+
+    callChatBot = async (userResponse) => {
+        const response = await Interactions.send("lot_lot", userResponse === undefined ? (this.state.response == '' ? 'book' : this.state.response) : userResponse);
         
         this.setState({question: response.message})
+
+        switch(response.slotToElicit) {
+            case 'GetCity': 
+                
+            break;
+            case 'GetFlightClass': 
+                this.setState({hints: ['first', 'business', 'premium economy','economy']})
+            break;
+            default: 
+                if(this.state.hints.length > 0)
+                    this.setState({hints: []})
+            break;
+        }
     }
 
     next = () => {
@@ -161,11 +79,11 @@ export default class ChatBot extends React.Component{
     }
 
     state = {
-        interactions: [],
         question: "",
         response: '',
+        hints: []
     }
-
+/*
     _renderItem = ({item}) => {
         switch(item.type) {
             case 'text':
@@ -237,39 +155,42 @@ export default class ChatBot extends React.Component{
         fetch('https://api.lot.com/flights-dev/v2/airports/get')
         .then(res => console.log(res))
         .catch(err => console.log(err))
+    }*/
+
+    onPressCallback = (response = undefined) => {
+        this.callChatBot(response);
+        this.setState({response: ''})
     }
 
     render() {
-        this.getAirports();
         return (
             <View style={styles.container}>
-                <View style={{alignItems:'center'}}>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Main')}><ExitIcon /></TouchableOpacity>
-                </View>
-                <Text style={styles.title}>Let’s find your perfect flight.</Text>
-                <KeyboardAvoidingView style={styles.bottomContainer} behavior="padding" enabled>                    
-                    <View style={styles.questionContainer}>
-                        <View style={styles.square}/>
-                        <Text style={styles.questionText}>{this.state.question}</Text>
+                    <Image source={require('../../assets/Lotty.png')} style={{position:'absolute',right: -10,top:200,zIndex:-1}}/>
+                    <View style={{alignItems:'center'}}>
+                        <View style={{marginBottom:20}}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Main')}><ExitIcon /></TouchableOpacity>
+                        </View>
+                        <View style={styles.questionContainer}>
+                            <Text style={styles.questionText}>{this.state.question}</Text>
+                        </View>
                     </View>
-                    <View style={styles.inputContainer}>
-                        {hints.map((hint,i) => <TouchableOpacity onPress={() => this.setState({response: hint})} key={i} style={styles.hintView}><Text>{hint}</Text></TouchableOpacity>)}
+                    
+                    <KeyboardAvoidingView behavior={'position'} contentContainerStyle={styles.inputContainer} enabled>
+                        <View style={{height:50,alignSelf:'flex-start',paddingLeft:20}}>
+                        <ScrollView horizontal>
+                            {this.state.hints.map((hint,i) => <TouchableOpacity style={{marginHorizontal: 10, height:20,paddingHorizontal:10,paddingVertical:5}} onPress={() => this.onPressCallback(hint)} key={i} style={styles.hintView}><Text>{hint}</Text></TouchableOpacity>)}
+                        </ScrollView>
+                        </View>
                         <View style={styles.inputInnerContainer}>
                             <TextInput 
                                 value={this.state.response} 
                                 style={styles.input} 
+                                onSubmitEditing={this.onPressCallback}
+                                returnKeyType="send"
                                 onChangeText={(text) => this.setState({response:text})} 
                             />
-                            <TouchableOpacity 
-                                style={styles.square}
-                                onPress={() => {
-                                    this.callChatBot();
-                                    this.setState({response: ''})
-                                }}
-                            ><Text style={{color: '#FFF',}}>C</Text></TouchableOpacity>
                         </View>
-                    </View>
-                </KeyboardAvoidingView>
+                    </KeyboardAvoidingView>
             </View>
         )
     }
@@ -290,16 +211,17 @@ const styles = StyleSheet.create({
     container: {
         flex:1,
         flexDirection: 'column',
-        justifyContent:'flex-end',
-        paddingTop:30,
-        backgroundColor: '#123C69'
+        justifyContent:'space-between',
+        paddingTop:100,
+        backgroundColor: '#123C69',
     },
     input: {
-        borderWidth:2,
-        borderColor: '#000',
+        backgroundColor: '#FFF',
         width: width/1.5,
         height: 50,
         borderRadius: 25,
+        padding:5,
+        marginTop:20,
     },
     bottomContainer: {
         paddingVertical:100,
@@ -326,11 +248,13 @@ const styles = StyleSheet.create({
     },
     questionContainer: {
         flexDirection: 'row',
-        paddingHorizontal: 20
+        paddingHorizontal: 20,
+        alignSelf: 'flex-start'
     },
     questionText: {
         fontSize:20,
-        color: '#707070'
+        fontWeight: 'bold',
+        color: '#FFF'
     },
     hintView: {
         backgroundColor: '#E8E8E8',
@@ -354,6 +278,7 @@ const styles = StyleSheet.create({
         marginTop: 20
     },
     inputContainer: {
-        marginBottom: 40
+        marginBottom: 40,
+        alignItems: 'center'
     }
 })

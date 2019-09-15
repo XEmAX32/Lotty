@@ -7,15 +7,31 @@ import ChatBot from './src/screens/ChatBot'
 import Confirmation from './src/screens/Confirmation'
 import FlightInformation from './src/screens/FlighInformation'
 // import PlaceInfo from './src/screens/PlaceInfo'
+import { AppLoading } from 'expo';
+import * as Font from 'expo-font';
 
+import { Asset } from 'expo-asset';
 
-const AppRouter = createStackNavigator(
-	{
-		Main: {
-			screen: Main,
-		},
-		ChatBot: {
-			screen: ChatBot
+function cacheImages(images) {
+	return images.map(image => {
+	  if (typeof image === 'string') {
+		return Image.prefetch(image);
+	  } else {
+		return Asset.fromModule(image).downloadAsync();
+	  }
+	});
+  }
+
+function cacheFonts(fonts) {
+	return fonts.map(font => Font.loadAsync(font));
+}
+
+const AppRouter = createStackNavigator({
+	Main: {
+		screen: Main,
+	},
+	ChatBot: {
+		screen: ChatBot
     },
     Confirmation: {
       screen: Confirmation
@@ -37,11 +53,39 @@ const AppRouterContainer = createAppContainer(AppRouter);
 
 class App extends React.Component {
 	
+	state = {
+		loading: true
+	}
+
+	async _loadAssetsAsync() {
+		const imageAssets = cacheImages([
+		  require('./assets/Lotty.png'),
+		  require("./assets/SH/WAW.jpg"),
+		  require("./assets/SH/MXP.jpg"),
+		  require("./assets/SH/OTP.jpg"),
+		  require("./assets/SH/BUD.jpg"),
+		  require('./assets/logoLOT.png')
+		]);
+	
+		const fontAssets = cacheFonts([{'Cera-Pro': require('./assets/fonts/Cera_Pro_Bold.ttf')}]);
+	
+		await Promise.all([...imageAssets, ...fontAssets]);
+	}
+
 	render(){
-		
-		return (
-			<AppRouterContainer />
-		);
+		if(this.state.loading) {
+			return (
+				<AppLoading
+					startAsync={this._loadAssetsAsync}
+					onFinish={() => this.setState({ loading: false })}
+					onError={console.warn}
+				/>
+			)
+		} else {
+			return (
+				<AppRouterContainer />
+			);
+		}
 	}
 }
 

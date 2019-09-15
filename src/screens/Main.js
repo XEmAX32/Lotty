@@ -80,8 +80,8 @@ const styles = StyleSheet.create({
 		fontSize:30,
 		lineHeight:42,
 		letterSpacing:3,
-		paddingHorizontal:30
-// 		fontFamily: 'Cera-Pro'
+		paddingHorizontal:30,
+		fontFamily: 'Cera-Pro'
 	},
 	SectionStyle: {
 		flexDirection: 'row',
