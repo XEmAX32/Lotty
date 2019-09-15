@@ -25,7 +25,7 @@ const AppRouterContainer = createAppContainer(AppRouter);
 class App extends React.Component {
 		
 	render(){
-		
+    
     return (
       <AppRouterContainer />
     );

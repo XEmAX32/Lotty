@@ -1,0 +1,19 @@
+{
+    "lot": {
+        "awscloudformation": {
+            "AuthRoleName": "lot-lot-20190915023815-authRole",
+            "UnauthRoleArn": "arn:aws:iam::427953717146:role/lot-lot-20190915023815-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::427953717146:role/lot-lot-20190915023815-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "lot-lot-20190915023815-deployment",
+            "UnauthRoleName": "lot-lot-20190915023815-unauthRole",
+            "StackName": "lot-lot-20190915023815",
+            "StackId": "arn:aws:cloudformation:eu-west-1:427953717146:stack/lot-lot-20190915023815/1b1e1570-d751-11e9-abd8-0aac29486886"
+        },
+        "categories": {
+            "auth": {
+                "cognito178a66fd": {}
+            }
+        }
+    }
+}

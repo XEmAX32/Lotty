@@ -17,7 +17,6 @@ export default function Main(){
 
 const styles = StyleSheet.create({
 	container: {
-        fontFamily: 'cera-medium',
         flex:1
 	}
 });
