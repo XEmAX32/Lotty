@@ -17,14 +17,38 @@ export default class MyFlights extends React.Component {
 				
 				<View style={{alignItems:'center'}}>
 					<Text style={{color:'#fff', fontWeight:'bold'}}>My flights.</Text>
-					<Ticket 
+					<View style={{height:450}}><Ticket 
 						name={'CAROLYN BAKER'} 
 						arrival={{hour:'21:00', date: '30 Jul 2019', airport: 'GDN',city:'Gdańsk'}}
 						departure={{hour: '20:00', date: '30 Jul 2019', airport: 'WAW',city:'Warsaw'}}
 						flight={{id:"LO285", class: 'Y',boarding: '19:30', seat: '4D'}}
 						
 						onPress={() => this.props.navigation.navigate("FlightInformation")}
-					/>
+					/></View>
+					<View style={{height:450}}><Ticket 
+						name={'CAROLYN BAKER'} 
+						arrival={{hour:'21:00', date: '30 Jul 2019', airport: 'GDN',city:'Gdańsk'}}
+						departure={{hour: '20:00', date: '30 Jul 2019', airport: 'WAW',city:'Warsaw'}}
+						flight={{id:"LO285", class: 'Y',boarding: '19:30', seat: '4D'}}
+						
+						onPress={() => this.props.navigation.navigate("FlightInformation")}
+					/></View>
+					<View style={{height:450}}><Ticket 
+						name={'CAROLYN BAKER'} 
+						arrival={{hour:'21:00', date: '30 Jul 2019', airport: 'GDN',city:'Gdańsk'}}
+						departure={{hour: '20:00', date: '30 Jul 2019', airport: 'WAW',city:'Warsaw'}}
+						flight={{id:"LO285", class: 'Y',boarding: '19:30', seat: '4D'}}
+						
+						onPress={() => this.props.navigation.navigate("FlightInformation")}
+					/></View>
+					<View style={{height:450}}><Ticket 
+						name={'CAROLYN BAKER'} 
+						arrival={{hour:'21:00', date: '30 Jul 2019', airport: 'GDN',city:'Gdańsk'}}
+						departure={{hour: '20:00', date: '30 Jul 2019', airport: 'WAW',city:'Warsaw'}}
+						flight={{id:"LO285", class: 'Y',boarding: '19:30', seat: '4D'}}
+						
+						onPress={() => this.props.navigation.navigate("FlightInformation")}
+					/></View>
 				</View>
 				
 			</ScrollView>

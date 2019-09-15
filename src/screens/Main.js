@@ -44,7 +44,7 @@ export default class Main extends React.Component{
 		
 			return (
 				
-				<View style={styles.container}>
+				<ScrollView style={styles.container} vertical>
 					<Text style={styles.header} >Welcome Back Carolyn.</Text>
 					<View style={styles.SectionStyle}>
 						<SearchIco style={styles.ImageStyle} />
@@ -64,7 +64,7 @@ export default class Main extends React.Component{
 						<Text style={styles.label}>My flights</Text>
 					</TouchableOpacity>
 					
-				</View>
+				</ScrollView>
 			)
 	}
 }
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: "#123C69",
-		paddingTop:80,
+		paddingTop:70,
 	},
 	header: {
 		color:"#fff",
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
 		lineHeight:42,
 		paddingHorizontal:30,
 		letterSpacing:3,
-		fontFamily: 'Cera-Pro'
+		fontFamily: 'Cera-Pro-Bold'
 	},
 	SectionStyle: {
 		flexDirection: 'row',
@@ -173,6 +173,8 @@ const styles = StyleSheet.create({
 		width:315,
 		left:30,
 		borderRadius:5,
+		marginTop:40,
+		marginBottom:100
 	},
 	label: {
 		top:30,

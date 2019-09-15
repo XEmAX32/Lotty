@@ -26,7 +26,7 @@ export default function Ticket({onPress,name,arrival,departure,flight, ...props}
                 alignHeight={true}
                 clickable={onPress instanceof Function ? false : true}
             >  
-                <View {...props}>
+                <View style={{height:300}}>
                     <View style={styles.top}>
                         <View style={{top:-10,backgroundColor: '#123C69',width: 20,height:20,borderBottomEndRadius:20,borderBottomStartRadius:20}}/>
                         <Text style={styles.name}>{name}</Text>
@@ -57,21 +57,21 @@ export default function Ticket({onPress,name,arrival,departure,flight, ...props}
                     </View>
                     <View style={styles.bottom}>
                         <View style={styles.bottomHorizontal}>
-                            <View style={{alignItems:'center'}}>
+                            <View >
                                 <Text style={styles.bottomTitle}>Flight</Text>
                                 <Text>{flight.id}</Text>
                             </View>
-                            <View style={{alignItems:'center'}}>
+                            <View >
                                 <Text style={styles.bottomTitle}>Boarding</Text>
                                 <Text>{flight.boarding}</Text>
                             </View>
                         </View>
                         <View style={styles.bottomHorizontal}>
-                            <View style={{alignItems:'center'}}>
+                            <View >
                                 <Text style={styles.bottomTitle}>Seat</Text>
                                 <Text>{flight.seat}</Text>
                             </View>
-                            <View style={{alignItems:'center'}}>
+                            <View >
                                 <Text style={styles.bottomTitle}>Class</Text>
                                 <Text>{flight.class}</Text>
                             </View>

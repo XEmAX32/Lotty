@@ -19,7 +19,7 @@ export default function FlightInformation({navigation}) {
 				</TouchableOpacity>
 			</View>
 			
-			<View style={{alignItems:'center'}}>
+			<View style={{alignItems:'center', height:450}}>
 				<Text style={styles.title}>Your flight informations.</Text>
 				<Ticket 
 					name={'CAROLYN BAKER'} 
@@ -29,7 +29,7 @@ export default function FlightInformation({navigation}) {
 				/>
 			</View>
 			
-			<View>
+			<View style={{zIndex:50}}>
 				<View style={{flex:1, flexDirection:'row', alignItems: 'center'}}>
 					<View style={styles.number}><Text style={styles.numbertx}>1</Text></View>
 					<Text style={[styles.header, {width:100}]}>About your baggage</Text> 
@@ -44,7 +44,7 @@ export default function FlightInformation({navigation}) {
 				</View>
 			</View>
 			
-			<View style={{marginBottom:100, marginTop:40}}>
+			<View style={{marginBottom:100, marginTop:40, zIndex:50}}>
 				<View style={{flex:1, flexDirection:'row', width:410, justifyContent:'center', alignItems: 'center'}}>
 					<Text style={[styles.header, {width:160, textAlign:'right'}]}>About the service on board</Text> 
 					<View style={styles.number}><Text style={styles.numbertx}>2</Text></View>

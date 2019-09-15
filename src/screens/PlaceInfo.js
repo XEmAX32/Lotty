@@ -113,7 +113,8 @@ const styles = StyleSheet.create({
 	},
 	info: {
 		marginTop:25,
-		paddingHorizontal:30
+		paddingHorizontal:30,
+		marginBottom:50
 	}
 })
 
