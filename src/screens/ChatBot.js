@@ -40,18 +40,18 @@ export default class ChatBot extends React.Component{
         let { status } = await Permissions.askAsync(Permissions.LOCATION);
 
         let location = await Location.getCurrentPositionAsync({});
-        console.log(location)
 
         const reverseGeocode = await Location.reverseGeocodeAsync({latitude: location.coords.latitude, longitude: location.coords.longitude})
-        console.log(reverseGeocode)
+
         this.setState({hints: [reverseGeocode[0].city+' '+reverseGeocode[0].country]})
       };
     
 
-    callChatBot = async (userResponse) => {
-        const response = await Interactions.send("lot_lot", userResponse === undefined ? (this.state.response == '' ? 'book' : this.state.response) : userResponse);
-        
-        this.setState({question: response.message})
+    callChatBot = async () => {
+
+        const response = await Interactions.send("lot_lot", this.state.response == '' ? 'book' : this.state.response);
+
+        this.setState({response: '',question: response.message})
 
         switch(response.slotToElicit) {
             case 'GetCity': 
@@ -60,9 +60,19 @@ export default class ChatBot extends React.Component{
             case 'GetFlightClass': 
                 this.setState({hints: ['first', 'business', 'premium economy','economy']})
             break;
+            case 'FlightPlace':
+                this.setState({hints: ['window', 'corridor']})
+                break
+            case 'AdditionalLagguage':
+                this.setState({hints: ['yes','no']})
+                break;
+            case null: 
+                setTimeout(() => {
+                    this.props.navigation.navigate('Confirmation', {name: response.slots.GetClientNames, departureCity: response.slots.GetCity,date:response.slots.GetDate, arrivalCity:this.props.navigation.state.params.dest})
+                },1000)
             default: 
                 if(this.state.hints.length > 0)
-                    this.setState({hints: []})
+                    this.setState({hints: ["..."]})
             break;
         }
     }
@@ -81,7 +91,7 @@ export default class ChatBot extends React.Component{
     state = {
         question: "",
         response: '',
-        hints: []
+        hints: ["..."]
     }
 /*
     _renderItem = ({item}) => {
@@ -157,12 +167,12 @@ export default class ChatBot extends React.Component{
         .catch(err => console.log(err))
     }*/
 
-    onPressCallback = (response = undefined) => {
-        this.callChatBot(response);
-        this.setState({response: ''})
+    onPressCallback = () => {
+        this.callChatBot();
     }
 
     render() {
+
         return (
             <View style={styles.container}>
                     <Image source={require('../../assets/Lotty.png')} style={{position:'absolute',right: -10,top:200,zIndex:-1}}/>
@@ -176,9 +186,10 @@ export default class ChatBot extends React.Component{
                     </View>
                     
                     <KeyboardAvoidingView behavior={'position'} contentContainerStyle={styles.inputContainer} enabled>
+                        <Text style={{color:'#FFF',fontWeight:'bold',textAlign:'left'}}>Hints</Text>
                         <View style={{height:50,alignSelf:'flex-start',paddingLeft:20}}>
                         <ScrollView horizontal>
-                            {this.state.hints.map((hint,i) => <TouchableOpacity style={{marginHorizontal: 10, height:20,paddingHorizontal:10,paddingVertical:5}} onPress={() => this.onPressCallback(hint)} key={i} style={styles.hintView}><Text>{hint}</Text></TouchableOpacity>)}
+                            {this.state.hints.map((hint,i) => <TouchableOpacity style={{marginHorizontal: 10, height:20,paddingHorizontal:10,paddingVertical:5}} onPress={() => this.setState({response:hint})} key={i} style={styles.hintView}><Text>{hint}</Text></TouchableOpacity>)}
                         </ScrollView>
                         </View>
                         <View style={styles.inputInnerContainer}>
