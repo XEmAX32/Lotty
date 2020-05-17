@@ -20,3 +20,4 @@ build/
 dist/
 node_modules/
 awsconfiguration.json
+local/
